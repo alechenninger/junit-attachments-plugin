@@ -57,6 +57,11 @@ public class AttachmentTestAction extends TestAction {
 		return testObject;
 	}
 
+	public boolean getHasSingleImageAttachment() {
+		return testObject instanceof CaseResult && attachments != null
+				&& attachments.size() == 1 && isImageFile(attachments.get(0));
+	}
+
 	public static boolean isImageFile(String filename) {
 		return filename.matches("(?i).+\\.(gif|jpe?g|png)$");
 	}

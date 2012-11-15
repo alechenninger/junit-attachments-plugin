@@ -22,7 +22,8 @@
     <st:adjunct includes="hudson.plugins.jquery.colorbox" />
     <script type="text/javascript">
         Q(document).ready(function() {
-            Q("a.gallery").colorbox({rel: "gallery", maxWidth: "95%", maxHeight: "95%", speed: 150});
+            var open = ${it.hasSingleImageAttachment};
+            Q("a.gallery").colorbox({rel: "gallery", maxWidth: "95%", maxHeight: "95%", speed: 150, open: open});
         });
     </script>
 
